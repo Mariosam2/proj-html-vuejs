@@ -4,20 +4,22 @@
     background-image: url(../img/bg-large.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
+    position: relative;
+
+    .layover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(to top, rgba($black, 0.9), rgba($secondary, 0.3));
+    }
 
     .ms_nav {
-        .container-fluid.ms_container {
+        .container-fluid {
             align-items: flex-start;
 
-            .ms_logo {
-                margin-inline-start: 8rem;
-
-                img {
-                    width: 150px;
-                }
-
-            }
 
             .ms_nav-item {
                 margin: 0 1rem;
@@ -30,5 +32,44 @@
 
         }
 
+    }
+
+    .ms_container-large {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        .jumbo {
+            height: 500px;
+            margin-top: 10rem;
+
+            .ms_logo {
+                position: absolute;
+                right: 100%;
+                bottom: 100%;
+                translate: 50%;
+                margin-bottom: 2rem;
+            }
+
+            .jumbo-header-p {
+                font-size: 2.5rem;
+                font-family: $pt-serif;
+            }
+
+            .caption {
+                color: $light-gray;
+            }
+
+            .btn.ms_btn-jumbo-header {
+                display: flex;
+                align-items: center;
+                background-color: rgba($black, 0.8);
+                color: $white;
+                margin: 0 0.5rem;
+                padding: 0.5rem 0.75rem;
+
+            }
+        }
     }
 }
