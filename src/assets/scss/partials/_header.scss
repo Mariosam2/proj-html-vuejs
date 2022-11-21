@@ -16,6 +16,26 @@
         background-image: linear-gradient(to top, rgba($black, 0.9), rgba($secondary, 0.3));
     }
 
+    .ms_cards {
+        position: absolute;
+        right: 0;
+        top: 20%;
+
+        .ms_card-small {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: $white;
+            min-height: 50px;
+            line-height: 1;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+        }
+    }
+
     .ms_nav {
         .container-fluid {
             align-items: flex-start;
@@ -54,12 +74,8 @@
 
             .jumbo-header-p {
                 font-size: 2.5rem;
-                font-family: $pt-serif;
             }
 
-            .caption {
-                color: $light-gray;
-            }
 
             .btn.ms_btn-jumbo-header {
                 display: flex;
@@ -69,6 +85,46 @@
                 margin: 0 0.5rem;
                 padding: 0.5rem 0.75rem;
 
+            }
+        }
+
+        .call-to-action {
+            position: absolute;
+            z-index: 9999;
+            bottom: 0;
+            right: 0;
+
+            .flex-container {
+                padding: 3rem;
+
+                .flex-item {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        padding: 0.5rem 0;
+                        border: 1px solid $dark-blue;
+                        background-color: white;
+                        transition: background-color 0.2s ease;
+                        box-shadow: 0 0 5px $pumice;
+                        font-weight: 500;
+
+                        &:hover {
+                            background-color: rgba($light-blue, 0.1);
+                        }
+
+                        .icon {
+                            width: 12px;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
             }
         }
     }

@@ -2,13 +2,40 @@
 @use './partials/header';
 @use './partials/variables' as *;
 
+
+
+//Common rules
 img {
     max-width: 100%;
     height: auto;
 }
 
 .jumbo-title {
-    font-family: $font-script;
     font-size: 5rem;
+}
+
+.jumbo-title,
+.text_primary {
     color: $primary;
+}
+
+.text-dark-blue {
+    color: $dark-blue;
+}
+
+.smaller {
+    font-size: 0.6rem;
+}
+
+.caption {
+    color: $light-gray;
+}
+
+
+.font-script {
+    font-family: $font-script;
+}
+
+.font-pt-serif {
+    font-family: $pt-serif;
 }
