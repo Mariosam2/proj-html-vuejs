@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+#site_header {
+    background-image: url(../img/bg-large.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .ms_nav {
+        .container-fluid.ms_container {
+            align-items: flex-start;
+
+            .ms_logo {
+                margin-inline-start: 8rem;
+
+                img {
+                    width: 150px;
+                }
+
+            }
+
+            .ms_nav-item {
+                margin: 0 1rem;
+
+                a {
+                    color: $white;
+                }
+            }
+
+
+        }
+
+    }
+}
