@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+#site_main {
+    padding: 1rem 0;
+
+    .jumbo {
+        .jumbo-main-p {
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+
+        .ms_btn-jumbo-main {
+            background-color: $dark-blue;
+            color: white;
+        }
+    }
+
+    .logos {
+        .logo {
+            display: flex;
+            justify-content: center;
+            padding: 0 2rem;
+
+            img {
+                height: 80%;
+                object-fit: contain;
+                object-position: center top;
+            }
+
+        }
+
+    }
+
+}

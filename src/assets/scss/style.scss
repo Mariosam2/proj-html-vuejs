@@ -1,5 +1,6 @@
 @use '../node_modules/bootstrap/scss/bootstrap.scss';
 @use './partials/header';
+@use './partials/main';
 @use './partials/variables' as *;
 
 
@@ -17,6 +18,14 @@ img {
 .jumbo-title,
 .text_primary {
     color: $primary;
+}
+
+.ms_btn-large {
+    padding: 0.5rem 2rem;
+}
+
+.bg_dawn-pink {
+    background-color: $dawn-pink;
 }
 
 .text-dark-blue {
