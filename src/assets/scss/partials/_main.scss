@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 #site_main {
-    padding-top: 1rem;
+    padding: 3rem 0;
 
     .jumbo {
         .jumbo-main-p {
@@ -11,7 +11,7 @@
 
         .ms_btn-jumbo-main {
             background-color: $dark-blue;
-            color: white;
+            color: $white;
         }
     }
 
@@ -31,6 +31,45 @@
             }
 
         }
+
+    }
+
+    .critics {
+        .heading {
+            button {
+                height: fit-content;
+                align-self: center;
+            }
+        }
+
+        .layover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba($black, 0.5);
+            border-radius: 0 0 5rem 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 999;
+            color: $white;
+        }
+
+        .critic {
+            position: relative;
+
+            .icon {
+                position: absolute;
+                top: 100%;
+                left: 10%;
+                translate: 0 -50%;
+
+            }
+        }
+
 
     }
 

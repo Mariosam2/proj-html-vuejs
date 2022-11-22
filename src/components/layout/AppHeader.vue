@@ -5,6 +5,11 @@ export default {
     name: 'Appheader',
     components: {
         NavbarItem, Jumbotron
+    },
+    methods: {
+        getImageUrl(name) {
+            return new URL(`../../assets/img/${name}`, import.meta.url).href
+        }
     }
 }
 </script>
@@ -26,7 +31,7 @@ export default {
         <div class="ms_container-large">
             <div class="row align-items-md-stretch">
                 <div class="col-md-6 position-relative">
-                    <img src="../../assets/img/author-logo-round-small.png" alt="" class="ms_logo">
+                    <img :src="getImageUrl('author-logo-round-small.png')" alt="" class="ms_logo">
                     <jumbotron :title="'Damon Vaugh'"
                         :content="'Best - selling author and the most influential public intellectual in the western world right now'"
                         :myKey="'header'"></jumbotron>
@@ -34,7 +39,7 @@ export default {
                 <div class="col-4 d-none d-xl-block bg-white call-to-action">
                     <div class="flex-container d-flex">
                         <div class="flex-item">
-                            <img src="../../assets/img/book-widget.png" alt="">
+                            <img :src="getImageUrl('book-widget.png')" alt="">
                             <button class="rounded-start"><svg class="icon" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512">
                                     <path

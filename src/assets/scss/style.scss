@@ -4,6 +4,12 @@
 @use './partials/variables' as *;
 
 
+@mixin coverNoRepeat () {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 
 //Common rules
 img {
@@ -24,14 +30,30 @@ img {
     padding: 0.5rem 2rem;
 }
 
+.bg_primary {
+    background-color: $primary;
+}
+
 .bg_dawn-pink {
     background-color: $dawn-pink;
 }
 
+.bg-testimonial {
+    background-image: url(../img/testimonial2-2x.jpg);
+    @include coverNoRepeat();
+    padding: 8rem;
+    border-radius: 0 0 5rem 0;
+    margin-top: 1rem;
+}
+
 .first_banner {
     background-image: url(../img/banner.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include coverNoRepeat();
+
+}
+
+.text_dawn-pink {
+    color: $dawn-pink
 }
 
 .text-dark-blue {
