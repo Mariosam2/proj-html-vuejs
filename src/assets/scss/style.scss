@@ -48,7 +48,6 @@ img {
 
 .bg-testimonial {
     background-image: url(../img/testimonial2-2x.jpg);
-    @include coverNoRepeat();
     padding: 8rem;
     border-radius: 0 0 5rem 0;
     margin-top: 1rem;
@@ -67,7 +66,8 @@ img {
 }
 
 .first_banner,
-.second_banner {
+.second_banner,
+.bg-testimonial {
     @include coverNoRepeat();
 
 }
