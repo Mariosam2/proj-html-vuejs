@@ -26,3 +26,13 @@ $primary-text: #e1aa40;
 
 $font-script: 'Marck Script', cursive;
 $pt-serif: 'PT Serif', serif;
+
+//Layover 
+
+@mixin layover() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

@@ -8,11 +8,7 @@
     position: relative;
 
     .layover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        @include layover();
         background-image: linear-gradient(to top, rgba($black, 0.9), rgba($secondary, 0.3));
     }
 

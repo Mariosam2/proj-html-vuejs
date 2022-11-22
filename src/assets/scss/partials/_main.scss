@@ -3,6 +3,18 @@
 #site_main {
     padding: 3rem 0;
 
+    .layover {
+        @include layover();
+        background-color: rgba($black, 0.5);
+        border-radius: 0 0 5rem 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 999;
+        color: $white;
+    }
+
     .jumbo {
         .jumbo-main-p {
             font-weight: 500;
@@ -42,21 +54,8 @@
             }
         }
 
-        .layover {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-color: rgba($black, 0.5);
-            border-radius: 0 0 5rem 0;
-        }
 
-        .content {
-            position: relative;
-            z-index: 999;
-            color: $white;
-        }
+
 
         .critic {
             position: relative;

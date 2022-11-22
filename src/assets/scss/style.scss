@@ -34,6 +34,14 @@ img {
     background-color: $primary;
 }
 
+.bg_dark-blue {
+    background-color: $dark-blue;
+}
+
+.bg_white {
+    background-color: $white;
+}
+
 .bg_dawn-pink {
     background-color: $dawn-pink;
 }
@@ -48,6 +56,18 @@ img {
 
 .first_banner {
     background-image: url(../img/banner.jpg);
+    padding-top: 5rem;
+
+}
+
+.second_banner {
+    background-image: url(../img/banner-2.jpg);
+    padding: 5rem 0;
+
+}
+
+.first_banner,
+.second_banner {
     @include coverNoRepeat();
 
 }

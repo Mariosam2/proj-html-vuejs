@@ -3,10 +3,11 @@ import Jumbotron from '../JumboItem.vue'
 import LogosList from './LogosList.vue'
 import BannerItem from './BannerItem.vue'
 import ArticlesAndCritics from './ArticlesAndCritics.vue';
+import CardsLayout from './CardsLayout.vue'
 export default {
     name: 'AppMain',
     components: {
-        Jumbotron, LogosList, BannerItem, ArticlesAndCritics
+        Jumbotron, LogosList, BannerItem, ArticlesAndCritics, CardsLayout
     },
     data() {
         return {
@@ -14,7 +15,18 @@ export default {
                 title: 'More About Damon Vaugh',
                 content: 'Damon Vaugh is a professor of psychology at the University of Toronto, a clinical psychologist and the author of the multi-million copy bestseller "The story of my life"',
                 myKey: 'main',
+            },
+            first_banner: {
+                title: 'New AudioBook',
+                subtitle: 'No time to read? No problem. Listen to it',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid ratione enim labore repellat molestiae hic perspiciatis sed, ab dolorem.',
+            },
+            second_banner: {
+                title: 'Subscribe To My Newsletter',
+                subtitle: 'Be notified about book signing tour dates',
+                paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid ratione.',
             }
+
         }
     }
 }
@@ -31,24 +43,17 @@ export default {
         <section class="bg_dawn-pink py-5 mt-5">
             <logos-list></logos-list>
         </section>
-        <section class="first_banner pt-5">
-            <banner-item></banner-item>
+        <section class="first_banner  position-relative">
+            <banner-item :banner="first_banner" :myKey="'first'"></banner-item>
         </section>
-        <section class="critics mt-5">
+        <section class="critics my-5">
             <articles-and-critics></articles-and-critics>
         </section>
         <section class="upcoming-events bg_dawn-pink py-5">
-            <div class="container">
-                <div class="heading text-center">
-                    <h1 class="font-pt-serif">Upcoming Events</h1>
-                    <h5 class="text-uppercase text_primary mt-3">meet the author in person</h5>
-                </div>
-                <div class="row row-cols-1 row-cols-3">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                </div>
-            </div>
+            <cards-layout></cards-layout>
+        </section>
+        <section class="second_banner position-relative">
+            <banner-item :banner="second_banner" :myKey="'second'"></banner-item>
         </section>
 
 
