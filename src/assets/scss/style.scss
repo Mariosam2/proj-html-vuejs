@@ -28,6 +28,12 @@ img {
     background-color: $dawn-pink;
 }
 
+.first_banner {
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .text-dark-blue {
     color: $dark-blue;
 }

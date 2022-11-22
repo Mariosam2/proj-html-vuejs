@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 #site_main {
-    padding: 1rem 0;
+    padding-top: 1rem;
 
     .jumbo {
         .jumbo-main-p {
@@ -16,13 +16,16 @@
     }
 
     .logos {
+        .col.logo {
+            padding: 0 3rem;
+        }
+
         .logo {
             display: flex;
             justify-content: center;
             padding: 0 2rem;
 
             img {
-                height: 80%;
                 object-fit: contain;
                 object-position: center top;
             }

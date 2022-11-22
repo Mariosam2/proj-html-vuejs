@@ -32,7 +32,7 @@ export default {
                 </svg>
             </div>
         </div>
-        <div class="btn ms_btn-jumbo-main ms_btn-large" v-else>Meet the autor</div>
+        <div class="btn ms_btn-jumbo-main ms_btn-large mt-4" v-else>Meet the autor</div>
 
     </div>
 </template>

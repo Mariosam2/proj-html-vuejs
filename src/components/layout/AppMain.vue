@@ -1,9 +1,10 @@
 <script>
 import Jumbotron from '../JumboItem.vue'
+import BannerItem from './BannerItem.vue'
 export default {
     name: 'AppMain',
     components: {
-        Jumbotron
+        Jumbotron, BannerItem
     }
 }
 </script>
@@ -35,6 +36,16 @@ export default {
                 </div>
             </div>
         </section>
+        <section class="first_banner pt-5">
+            <banner-item></banner-item>
+        </section>
+        <section class="critics">
+            <div class="container">
+                <div class="row"></div>
+            </div>
+        </section>
+
+
     </main>
 </template>
 <style>
