@@ -10,13 +10,19 @@ export default {
     data() {
         return {
             store,
+            enter: false,
+            jumbo: {
+                title: 'Damon Vaughn',
+                content: null,
+                myKey: 'header',
+            },
         }
     }
 
 }
 </script>
 <template>
-    <header id="site_header" class="px-5">
+    <header id="site_header" class="px-5" @mouseenter="enter = true" @mouseleave="enter = false">
         <div class="layover"></div>
         <div class="ms_cards d-flex flex-column">
             <div class="ms_card-small"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -34,11 +40,9 @@ export default {
             <div class="row align-items-md-stretch">
                 <div class="col-md-6 position-relative">
                     <img :src="store.getImageUrl('author-logo-round-small.png')" alt="" class="ms_logo">
-                    <jumbotron :title="'Damon Vaughn'"
-                        :content="'Best - selling author and the most influential public intellectual in the western world right now'"
-                        :myKey="'header'"></jumbotron>
+                    <jumbotron :title="jumbo.title" :content="jumbo.content" :myKey="jumbo.myKey"></jumbotron>
                 </div>
-                <div class="col-4 d-none d-xxl-block bg-white call-to-action">
+                <div class="col-4 d-none d-xxl-block bg-white call-to-action" :class="enter ? 'display' : ''">
                     <div class="flex-container d-flex">
                         <div class="flex-item">
                             <img :src="store.getImageUrl('book-widget.png')" alt="">

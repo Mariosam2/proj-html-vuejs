@@ -13,7 +13,9 @@
 
 
 //Common rules
-
+html {
+    scroll-behavior: smooth;
+}
 
 .ms_container-large {
     width: 100%;
