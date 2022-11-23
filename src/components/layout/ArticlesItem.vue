@@ -1,6 +1,12 @@
 <script>
+import { store } from '../../store.js'
 export default {
     name: 'ArticlesItem',
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 <template>
@@ -15,7 +21,7 @@ export default {
         <div class="row gx-5 my-3">
             <div class="col-12 col-xl-8">
                 <div class="content ms_card">
-                    <img src="../../assets/img/20-Tips-1200x706.jpg" alt="">
+                    <img :src="store.getImageUrl('20-Tips-1200x706.jpg')" alt="">
                     <h4>20 Creativity Tips</h4>
                     <small class=" d-block py-3 caption">By <span class="text-black">admin </span>| October 24th, 2019 |
                         Categories: <span class="text-black"> Event, Tips & Tricks</span></small>

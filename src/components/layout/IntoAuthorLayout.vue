@@ -1,50 +1,30 @@
 <script>
+import { store } from '../../store.js'
 export default {
     name: 'IntoAuthorLayout',
-    methods: {
-        getImageUrl(name) {
-            return new URL(`../../assets/img/${name}`, import.meta.url).href
+    data() {
+        return {
+            store,
         }
-    }
+    },
+
 }
 </script>
 <template>
     <div class="container">
         <div class="heading text-center">
-            <h1 class="font-pt-serif">Dig A Little Deeper Into Damon Vaughn</h1>
-            <h5 class="text-uppercase text_primary mt-3">Find out more about the author himself</h5>
+            <h1 class="font-pt-serif">{{ store.into_author.heading.title }}</h1>
+            <h5 class="text-uppercase text_primary mt-3">{{ store.into_author.heading.subtitle }}</h5>
         </div>
         <div class="row row-cols-1 row-cols-3 mt-5 gx-5">
-            <div class="col">
+            <div class="col" v-for="card in store.into_author.cards">
                 <div class="ms_card">
                     <div class="layover"></div>
-                    <img :src="getImageUrl('box-1.jpg')" alt="">
+                    <img :src="store.getImageUrl(card.img)" alt="">
                     <div class="content bg_white text-center p-4">
-                        <h3 class="pb-2">About Me</h3>
+                        <h3 class="pb-2">{{ card.title }}</h3>
                         <hr class="w-25 my-3">
-                        <span class="text_primary py-2">Lorem ipsum dolor sit amet.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="ms_card">
-                    <div class="layover"></div>
-                    <img :src="getImageUrl('box-4.jpg')" alt="">
-                    <div class="content bg_white text-center p-4">
-                        <h3 class="pb-2">My Latest Book</h3>
-                        <hr class="w-25 my-3">
-                        <span class="text_primary py-2">Lorem ipsum dolor sit amet.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="ms_card">
-                    <div class="layover"></div>
-                    <img :src="getImageUrl('box-3.jpg')" alt="">
-                    <div class="content bg_white text-center p-4">
-                        <h3 class="pb-2">Book Signing</h3>
-                        <hr class="w-25 my-3">
-                        <span class="text_primary py-2">Lorem ipsum dolor sit amet.</span>
+                        <span class="text_primary py-2">{{ card.subtitle }}</span>
                     </div>
                 </div>
             </div>

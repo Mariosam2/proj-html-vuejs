@@ -68,5 +68,69 @@ export const store = reactive({
                 content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, ex. Pariatur blanditiis perferendis vitae iure perspiciatis velit nisi similique sunt.'
             }
         ]
+    },
+    into_author: {
+        heading: {
+            title: 'Dig A Little Deeper Into Damon Vaughn',
+            subtitle: 'Find out more about the author himself',
+        },
+        cards: [
+            {
+                img: 'box-1.jpg',
+                title: 'About Me',
+                subtitle: 'Lorem ipsum dolor sit amet.'
+            },
+            {
+                img: 'box-4.jpg',
+                title: 'My Latest Book',
+                subtitle: 'Lorem ipsum dolor sit amet.'
+            },
+            {
+                img: 'box-3.jpg',
+                title: 'Book Signing',
+                subtitle: 'Lorem ipsum dolor sit amet.'
+            }
+        ]
+    },
+    articles: {
+        heading: {
+            title: 'Recent Articles',
+            subtitle: 'Read the latest entries',
+            button: 'All Articles'
+        },
+        main_card: {
+            img: '',
+            title: '20 Creativity Tips',
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae est pariatur quibusdam! Minus quibusdam itaque blanditiis deleniti nostrum ab nulla.',
+            info: {
+                author: 'admin',
+                date: 'October 24th, 2019',
+                categories: 'Event, Tips & Trick',
+                comments: 0,
+            }
+        },
+
+        cards: [
+            {
+                img: '',
+                title: 'What\' On Your Booklist',
+                info: {
+                    date: 'October 24th, 2019',
+                    comments: 0,
+                }
+            },
+            {
+                img: '',
+                title: 'Istanbul Travel Guide',
+                info: {
+                    date: 'October 24th, 2019',
+                    comments: 0,
+                }
+            },
+
+        ]
+    },
+    getImageUrl(name) {
+        return new URL(`./assets/img/${name}`, import.meta.url).href
     }
 })

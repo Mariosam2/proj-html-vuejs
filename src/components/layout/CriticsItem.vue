@@ -7,11 +7,7 @@ export default {
             store,
         }
     },
-    methods: {
-        getImageUrl(name) {
-            return new URL(`../../assets/img/${name}`, import.meta.url).href
-        },
-    }
+
 }
 </script>
 <template>
@@ -31,7 +27,7 @@ export default {
                     <h5 class="fw-semibold">{{ store.critics.main_card.subtitle }}</h5>
                     <p v-for="paragraph in store.critics.main_card.paragraphs">{{ paragraph.content }}</p>
                     <span class="d-flex align-items-center fw-bold py-3">
-                        <img class="me-3" :src="getImageUrl(store.critics.main_card.author.img)" alt="">
+                        <img class="me-3" :src="store.getImageUrl(store.critics.main_card.author.img)" alt="">
                         {{ store.critics.main_card.author.name }}
                         <span class="text-dark-blue ms-1">{{ store.critics.main_card.author.company }}</span>
                     </span>
@@ -51,7 +47,7 @@ export default {
                         </svg>
                     </div>
                     <span class="d-flex align-items-center fw-bold caption py-3"><img class="me-3"
-                            :src="getImageUrl(critic.author.img)" alt="">
+                            :src="store.getImageUrl(critic.author.img)" alt="">
                         {{ critic.author.name }}
                         <span class="text-dark fw-normal ms-1">
                             {{ critic.author.company }}

@@ -7,11 +7,8 @@ export default {
             store,
         }
     },
-    methods: {
-        getImageUrl(name) {
-            return new URL(`../../assets/img/${name}`, import.meta.url).href
-        }
-    }
+
+
 }
 </script>
 <template>
@@ -22,7 +19,7 @@ export default {
         </div>
         <div class="row row-cols-1 row-cols-3 mt-5">
             <div class="col ms_card d-flex flex-column" v-for="card in store.events.cards">
-                <img :src="getImageUrl(card.img)" alt="">
+                <img :src="store.getImageUrl(card.img)" alt="">
                 <div class="content bg_white text-center p-4">
                     <h3 class="pb-4 border-bottom">{{ card.title }}</h3>
                     <p class="caption py-2">{{ card.content }}</p>
