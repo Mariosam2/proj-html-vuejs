@@ -42,6 +42,19 @@
 
     }
 
+    .upcoming-events {
+        .ms_card {
+            &:hover {
+                cursor: pointer;
+
+                img {
+                    filter: hue-rotate(25deg);
+
+                }
+            }
+        }
+    }
+
     .critics,
     .articles {
         .heading {
@@ -81,6 +94,25 @@
             display: flex;
             justify-content: center;
             min-height: 500px;
+
+            &:hover {
+                cursor: pointer;
+
+                img,
+                .layover {
+
+                    box-shadow: 0 0 10px $oslo-gray;
+                }
+
+
+
+            }
+
+            img,
+            .layover {
+
+                transition: all 0.2s ease;
+            }
 
             .layover {
                 border-radius: 0 0 4rem 0;

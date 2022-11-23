@@ -51,7 +51,7 @@
 
     .layover {
         @include layover();
-        background-color: rgba($black, 0.4)
+        background-image: linear-gradient(to top, rgba($black, 0.9), rgba($secondary, 0.5));
     }
 
     img {

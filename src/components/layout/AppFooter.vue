@@ -1,6 +1,38 @@
 <script>
 export default {
-    name: 'AppFooter'
+    name: 'AppFooter',
+    data() {
+        return {
+            links: [
+                {
+                    link: '#',
+                    name: 'Latest Books',
+                },
+                {
+                    link: '#',
+                    name: 'Upcoming Events',
+                },
+                {
+                    link: '#',
+                    name: 'Recent Articles',
+                },
+                {
+                    link: '#',
+                    name: 'Business Enquiries',
+                },
+                {
+                    link: '#',
+                    name: 'Visit My Foundation',
+                },
+            ],
+            contact_info: {
+                address: '63 E.Studebaked Street Bolingbrook, IL 60440',
+                phone_num: 'Phone: (800) 000-0000',
+                mobile_num: 'Mobile: (800) 000-0000',
+                email: 'info@your-company.com',
+            }
+        }
+    }
 }
 </script>
 <template>
@@ -20,50 +52,22 @@ export default {
                 <div class="col p-5">
                     <h3 class=" font-pt-serif text-uppercase">Useful Links</h3>
                     <ul class="list-unstyled links">
-                        <li>
+                        <li v-for="link in links">
                             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
                                         d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                </svg></div> <a href="#">Latest Books</a>
-                        </li>
-                        <li>
-                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                </svg></div><a href="#">Latest Books</a>
-                        </li>
-                        <li>
-                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                </svg></div><a href="#">Latest Books</a>
-                        </li>
-                        <li>
-                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                </svg></div><a href="#">Latest Books</a>
-                        </li>
-                        <li>
-                            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                </svg></div><a href="#">Latest Books</a>
+                                </svg></div> <a :href="link.link">{{ link.name }}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col p-5">
                     <h3 class=" font-pt-serif text-uppercase">Contact Info</h3>
                     <ul class="text_lightgray list-unstyled">
-                        <li>63 E.Studebaked Street Bolingbrook, IL 60440</li>
-                        <li>Phone: (800) 000-0000</li>
-                        <li>Mobile: (800) 000-0000</li>
-                        <li>Email: <span class="text-white">info@your-company.com</span></li>
+                        <li>{{ contact_info.address }}</li>
+                        <li>{{ contact_info.phone_num }}</li>
+                        <li>{{ contact_info.mobile_num }}</li>
+                        <li>Email: <span class="text-white">{{ contact_info.email }}</span></li>
                         <li class="social d-flex my-2 justify-conten-between">
                             <div class="icon">
                                 <a href="#">

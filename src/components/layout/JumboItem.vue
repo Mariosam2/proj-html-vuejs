@@ -11,7 +11,8 @@ export default {
 <template>
     <div class="jumbo">
         <h2 class="jumbo-title font-script">{{ title }}</h2>
-        <p :class="myKey === 'header' ? 'jumbo-header-p text-white font-pt-serif' : 'jumbo-main-p p-2'">{{ content }}
+        <p :class="myKey === 'header' ? 'jumbo-header-p text-white font-pt-serif' : 'jumbo-main-p p-2'">
+            {{ content }}
         </p>
         <span v-if="myKey === 'header'" class="caption d-block">
             <i>- The New York Times</i>
@@ -32,7 +33,7 @@ export default {
                 </svg>
             </div>
         </div>
-        <div class="btn ms_btn bg_dark-blue ms_btn-large mt-4 text-white" v-else>Meet the autor</div>
+        <div class="btn ms_btn bg_light-blue ms_btn-large mt-4 text-white" v-else>Meet the autor</div>
 
     </div>
 </template>

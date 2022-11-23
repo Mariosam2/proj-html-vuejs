@@ -39,10 +39,32 @@
 
             .ms_nav-item {
                 margin: 0 1rem;
+                transition: all 0.2s ease;
 
-                a {
+                svg {
                     color: $white;
                 }
+
+                a {
+                    border-top: 4px solid transparent;
+                    color: $white;
+                }
+
+                &:hover {
+                    a:not(a.icon) {
+                        color: $primary;
+                        border-top: 4px solid $primary;
+
+                        svg {
+                            color: $primary;
+                        }
+                    }
+
+
+                }
+
+
+
             }
 
 
@@ -111,6 +133,10 @@
 
                         &:hover {
                             background-color: rgba($light-blue, 0.1);
+
+                            a {
+                                color: $black;
+                            }
                         }
 
                         .icon {

@@ -29,6 +29,7 @@ img {
 
 a {
     text-decoration: none;
+    color: $black;
 }
 
 .jumbo-title {
@@ -48,8 +49,8 @@ a {
     background-color: $primary;
 }
 
-.bg_dark-blue {
-    background-color: $dark-blue;
+.bg_light-blue {
+    background-color: $light-blue;
 }
 
 .bg_white {
@@ -113,4 +114,14 @@ a {
 
 .font-pt-serif {
     font-family: $pt-serif;
+}
+
+//buttons 
+
+.btn.bg_primary:hover {
+    background-color: $corn-harvest;
+}
+
+.btn.bg_light-blue:hover {
+    background-color: $dark-blue;
 }

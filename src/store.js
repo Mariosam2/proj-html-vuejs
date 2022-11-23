@@ -99,7 +99,7 @@ export const store = reactive({
             button: 'All Articles'
         },
         main_card: {
-            img: '',
+            img: '20-Tips-1200x706.jpg',
             title: '20 Creativity Tips',
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae est pariatur quibusdam! Minus quibusdam itaque blanditiis deleniti nostrum ab nulla.',
             info: {
@@ -112,15 +112,15 @@ export const store = reactive({
 
         cards: [
             {
-                img: '',
-                title: 'What\' On Your Booklist',
+                img: 'thumb-13-2x-700x441.jpg',
+                title: 'What\'s On Your Booklist?',
                 info: {
                     date: 'October 24th, 2019',
                     comments: 0,
                 }
             },
             {
-                img: '',
+                img: 'thumb-08-2x-700x441.jpg',
                 title: 'Istanbul Travel Guide',
                 info: {
                     date: 'October 24th, 2019',

@@ -22,6 +22,18 @@ export default {
             },
             first_banner: {
                 title: 'New AudioBook',
+                image: 'audible-app-2x-800x837.png',
+                logos: [
+                    {
+                        image: 'audible-logo.png'
+                    },
+                    {
+                        image: 'bn-logo-tall.png'
+                    },
+                    {
+                        image: 'kindle-logo-tall.png'
+                    },
+                ],
                 subtitle: 'No time to read? No problem. Listen to it',
                 paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid ratione enim labore repellat molestiae hic perspiciatis sed, ab dolorem.',
                 myKey: 'first'

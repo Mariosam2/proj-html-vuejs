@@ -5,6 +5,20 @@ export default {
     data() {
         return {
             store,
+            logos: [
+                {
+                    image: 'ebay-logotan-2x-600x197.png'
+                },
+                {
+                    image: 'audible-logotan-2x-600x197.png'
+                },
+                {
+                    image: 'bb-logotan-2x-600x197.png'
+                },
+                {
+                    image: 'kindlefire-logotan-2x-600x197.png'
+                },
+            ]
         }
     }
 }
@@ -12,17 +26,8 @@ export default {
 <template>
     <div class="container">
         <div class="row row-cols-1 row-cols-xl-4 logos">
-            <div class="col logo">
-                <img :src="store.getImageUrl('ebay-logotan-2x-600x197.png')" alt="" />
-            </div>
-            <div class="col logo">
-                <img :src="store.getImageUrl('audible-logotan-2x-600x197.png')" alt="" />
-            </div>
-            <div class="col logo">
-                <img :src="store.getImageUrl('bb-logotan-2x-600x197.png')" alt="" />
-            </div>
-            <div class="col logo">
-                <img :src="store.getImageUrl('kindlefire-logotan-2x-600x197.png')" alt="" />
+            <div class="col logo" v-for="logo in logos">
+                <img :src="store.getImageUrl(logo.image)" alt="" />
             </div>
         </div>
     </div>
