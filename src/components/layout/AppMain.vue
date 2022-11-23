@@ -6,6 +6,7 @@ import CriticsItem from './CriticsItem.vue'
 import EventsLayout from './EventsLayout.vue'
 import IntoAuthorLayout from './IntoAuthorLayout.vue'
 import ArticlesItem from './ArticlesItem.vue'
+import { store } from '../../store.js'
 export default {
     name: 'AppMain',
     components: {
@@ -13,6 +14,7 @@ export default {
     },
     data() {
         return {
+            store,
             jumbo: {
                 title: 'More About Damon Vaughn',
                 content: 'Damon Vaughn is a professor of psychology at the University of Toronto, a clinical psychologist and the author of the multi-million copy bestseller "The story of my life"',
@@ -22,13 +24,14 @@ export default {
                 title: 'New AudioBook',
                 subtitle: 'No time to read? No problem. Listen to it',
                 paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid ratione enim labore repellat molestiae hic perspiciatis sed, ab dolorem.',
+                myKey: 'first'
             },
             second_banner: {
                 title: 'Subscribe To My Newsletter',
                 subtitle: 'Be notified about book signing tour dates',
                 paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid ratione.',
-            }
-
+                myKey: 'second'
+            },
         }
     }
 }
@@ -38,7 +41,8 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center my-5">
-                    <jumbotron :title="jumbo.title" :content="jumbo.content" :myKey="jumbo.myKey"></jumbotron>
+                    <jumbotron :title="jumbo.title" :content="jumbo.content" :myKey="jumbo.myKey">
+                    </jumbotron>
                 </div>
             </div>
         </div>
@@ -46,7 +50,7 @@ export default {
             <logos-list></logos-list>
         </section>
         <section class="first_banner  position-relative">
-            <banner-item :banner="first_banner" :myKey="'first'"></banner-item>
+            <banner-item :banner="first_banner" :myKey="first_banner.myKey"></banner-item>
         </section>
         <section class="critics my-5">
             <critics-item></critics-item>
@@ -55,7 +59,7 @@ export default {
             <events-layout></events-layout>
         </section>
         <section class="second_banner position-relative">
-            <banner-item :banner="second_banner" :myKey="'second'"></banner-item>
+            <banner-item :banner="second_banner" :myKey="second_banner.myKey"></banner-item>
         </section>
         <section class="into-author py-5 my-5">
             <into-author-layout></into-author-layout>

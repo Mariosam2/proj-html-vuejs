@@ -22,7 +22,7 @@ export default {
                     <div class="content bg_white text-center p-4">
                         <h3 class="pb-2">About Me</h3>
                         <hr class="w-25 my-3">
-                        <spam class="text_primary py-2">Lorem ipsum dolor sit amet.</spam>
+                        <span class="text_primary py-2">Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ export default {
                     <div class="content bg_white text-center p-4">
                         <h3 class="pb-2">My Latest Book</h3>
                         <hr class="w-25 my-3">
-                        <spam class="text_primary py-2">Lorem ipsum dolor sit amet.</spam>
+                        <span class="text_primary py-2">Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ export default {
                     <div class="content bg_white text-center p-4">
                         <h3 class="pb-2">Book Signing</h3>
                         <hr class="w-25 my-3">
-                        <spam class="text_primary py-2">Lorem ipsum dolor sit amet.</spam>
+                        <span class="text_primary py-2">Lorem ipsum dolor sit amet.</span>
                     </div>
                 </div>
             </div>

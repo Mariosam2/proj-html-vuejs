@@ -60,15 +60,20 @@
 
     .critics {
         .critic {
-            position: relative;
+            .content {
+                position: relative;
 
-            .icon {
-                position: absolute;
-                top: 100%;
-                left: 10%;
-                translate: 0 -50%;
+                .icon {
+                    position: absolute;
+                    top: 100%;
+                    left: 10%;
+                    translate: 0 -50%;
 
+                }
             }
+
+
+
         }
     }
 
