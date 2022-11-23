@@ -9,7 +9,7 @@ export default {
 }
 </script>
 <template>
-    <div class="container">
+    <div class="ms_container-large">
         <div class="heading text-center">
             <h1 class="font-pt-serif">Upcoming Events</h1>
             <h5 class="text-uppercase text_primary mt-3">meet the author in person</h5>
@@ -41,6 +41,7 @@ export default {
             </div>
         </div>
     </div>
+
 </template>
 <style>
 

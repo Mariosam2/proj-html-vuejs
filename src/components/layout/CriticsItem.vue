@@ -1,10 +1,10 @@
 <script>
 export default {
-    name: 'ArticlesAndCritics',
+    name: 'CriticsItem',
     methods: {
         getImageUrl(name) {
             return new URL(`../../assets/img/${name}`, import.meta.url).href
-        }
+        },
     }
 }
 </script>
@@ -17,13 +17,10 @@ export default {
             </div>
             <button class="btn  bg_primary text-white ms_btn-large ms-auto">Read All Testimonials</button>
         </div>
-
-
-
         <div class="row gx-5">
-            <div class="col-12 col-xl-7 bg-testimonial position-relative d-flex">
+            <div class="col-12 col-xl-7 bg-testimonial position-relative">
                 <div class="layover"></div>
-                <div class="content align-self-center">
+                <div class="content align-self-center text-white">
                     <h3 class="font-pt-serif mb-5 pb-5 border-bottom">Best Author of His Generation</h3>
                     <h5 class="fw-semibold">This book will change your perspective on life</h5>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat voluptatibus ducimus
@@ -37,6 +34,7 @@ export default {
                         Kilpatrick, <span class="text-dark-blue ms-1">The
                             New York Times</span></span>
                 </div>
+
 
             </div>
             <div class="col-12 col-xl-5">
@@ -71,11 +69,13 @@ export default {
                 </div>
                 <span class="d-flex align-items-center fw-bold py-3 caption"><img class="me-3"
                         :src="getImageUrl('globe-xsmall.png')" alt="">Mary Maxey, <span
-                        class="text-dark fw-normal ms-1">The Globe And Mail</span></span>
+                        class="text-dark fw-normal ms-1">The
+                        Globe And Mail</span></span>
             </div>
 
         </div>
     </div>
+
 </template>
 <style>
 

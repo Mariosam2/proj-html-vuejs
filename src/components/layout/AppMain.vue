@@ -1,13 +1,14 @@
 <script>
-import Jumbotron from '../JumboItem.vue'
+import Jumbotron from './JumboItem.vue'
 import LogosList from './LogosList.vue'
 import BannerItem from './BannerItem.vue'
-import ArticlesAndCritics from './ArticlesAndCritics.vue';
+import CriticsItem from './CriticsItem.vue'
 import CardsLayout from './CardsLayout.vue'
+import ArticlesItem from './ArticlesItem.vue'
 export default {
     name: 'AppMain',
     components: {
-        Jumbotron, LogosList, BannerItem, ArticlesAndCritics, CardsLayout
+        Jumbotron, LogosList, BannerItem, CriticsItem, CardsLayout, ArticlesItem
     },
     data() {
         return {
@@ -47,7 +48,7 @@ export default {
             <banner-item :banner="first_banner" :myKey="'first'"></banner-item>
         </section>
         <section class="critics my-5">
-            <articles-and-critics></articles-and-critics>
+            <critics-item></critics-item>
         </section>
         <section class="upcoming-events bg_dawn-pink py-5">
             <cards-layout></cards-layout>
@@ -55,9 +56,12 @@ export default {
         <section class="second_banner position-relative">
             <banner-item :banner="second_banner" :myKey="'second'"></banner-item>
         </section>
-
-
-
+        <section class="into-author py-5">
+            <cards-layout></cards-layout>
+        </section>
+        <section class="articles py-5 bg_dawn-pink">
+            <articles-item></articles-item>
+        </section>
     </main>
 </template>
 <style>

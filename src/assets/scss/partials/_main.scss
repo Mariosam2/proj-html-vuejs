@@ -12,7 +12,7 @@
     .content {
         position: relative;
         z-index: 999;
-        color: $white;
+
     }
 
     .jumbo {
@@ -46,7 +46,8 @@
 
     }
 
-    .critics {
+    .critics,
+    .articles {
         .heading {
             button {
                 height: fit-content;
@@ -55,8 +56,9 @@
         }
 
 
+    }
 
-
+    .critics {
         .critic {
             position: relative;
 
@@ -68,6 +70,31 @@
 
             }
         }
+    }
+
+    .articles {
+
+        .content.ms_card {
+            height: 100%;
+            padding: 2rem 2rem 0 2rem;
+        }
+
+        .ms_card {
+            background-color: white;
+            padding: 2rem 2rem 1rem 2rem;
+
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        h4 {
+            padding-top: 2rem;
+        }
+
 
 
     }

@@ -1,6 +1,6 @@
 <script>
-import NavbarItem from '../NavbarItem.vue';
-import Jumbotron from '../JumboItem.vue';
+import NavbarItem from './NavbarItem.vue';
+import Jumbotron from './JumboItem.vue';
 export default {
     name: 'Appheader',
     components: {

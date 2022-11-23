@@ -23,7 +23,7 @@ export default {
                 <h1 class="font-pt-serif text-white mb-3">{{ banner.title }}</h1>
                 <h5 class="text-uppercase text_primary">{{ banner.subtitle }}</h5>
                 <div v-if="myKey === 'second'" class="email d-flex py-4">
-                    <input type="email" name="" id="" class="form-control mx-3">
+                    <input type="email" name="" id="" class="form-control mx-3" placeholder="example@domain.com">
                     <button class="btn ms_btn ms_btn-large bg_dark-blue text-white">Subscribe</button>
 
                 </div>
