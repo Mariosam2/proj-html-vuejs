@@ -1,0 +1,53 @@
+@use './variables' as*;
+
+#site_footer {
+    background-image: url(../img/bg-large.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem;
+    position: relative;
+
+    ul {
+        li {
+            padding: 0.5rem 0;
+        }
+    }
+
+    .links {
+        li {
+            display: flex;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                stroke: $white;
+                stroke-width: 2px;
+            }
+        }
+    }
+
+    svg {
+        width: 18px;
+        height: auto;
+
+    }
+
+    .icon {
+        margin: 0 0.5rem
+    }
+
+    .layover {
+        @include layover();
+        background-color: rgba($black, 0.4)
+    }
+
+    img {
+        position: absolute;
+    }
+
+    .row {
+        position: relative;
+        z-index: 999;
+    }
+}

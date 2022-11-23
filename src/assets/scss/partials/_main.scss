@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 #site_main {
-    padding: 3rem 0;
+    padding-top: 3rem;
 
     .layover {
         @include layover();
