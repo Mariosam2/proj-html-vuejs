@@ -3,18 +3,19 @@ import Jumbotron from './JumboItem.vue'
 import LogosList from './LogosList.vue'
 import BannerItem from './BannerItem.vue'
 import CriticsItem from './CriticsItem.vue'
-import CardsLayout from './CardsLayout.vue'
+import EventsLayout from './EventsLayout.vue'
+import IntoAuthorLayout from './IntoAuthorLayout.vue'
 import ArticlesItem from './ArticlesItem.vue'
 export default {
     name: 'AppMain',
     components: {
-        Jumbotron, LogosList, BannerItem, CriticsItem, CardsLayout, ArticlesItem
+        Jumbotron, LogosList, BannerItem, CriticsItem, EventsLayout, IntoAuthorLayout, ArticlesItem
     },
     data() {
         return {
             jumbo: {
-                title: 'More About Damon Vaugh',
-                content: 'Damon Vaugh is a professor of psychology at the University of Toronto, a clinical psychologist and the author of the multi-million copy bestseller "The story of my life"',
+                title: 'More About Damon Vaughn',
+                content: 'Damon Vaughn is a professor of psychology at the University of Toronto, a clinical psychologist and the author of the multi-million copy bestseller "The story of my life"',
                 myKey: 'main',
             },
             first_banner: {
@@ -51,13 +52,13 @@ export default {
             <critics-item></critics-item>
         </section>
         <section class="upcoming-events bg_dawn-pink py-5">
-            <cards-layout></cards-layout>
+            <events-layout></events-layout>
         </section>
         <section class="second_banner position-relative">
             <banner-item :banner="second_banner" :myKey="'second'"></banner-item>
         </section>
-        <section class="into-author py-5">
-            <cards-layout></cards-layout>
+        <section class="into-author py-5 my-5">
+            <into-author-layout></into-author-layout>
         </section>
         <section class="articles py-5 bg_dawn-pink">
             <articles-item></articles-item>

@@ -72,6 +72,40 @@
         }
     }
 
+    .into-author {
+
+
+        .ms_card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            min-height: 500px;
+
+            .layover {
+                border-radius: 0 0 4rem 0;
+
+            }
+
+            img {
+                border-radius: 0 0 4rem 0;
+                object-fit: cover;
+            }
+
+            .content {
+                position: absolute;
+                background-color: transparent;
+                color: $white;
+                bottom: 10%;
+
+                hr {
+                    margin: auto;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
     .articles {
 
         .content.ms_card {
@@ -80,7 +114,7 @@
         }
 
         .ms_card {
-            background-color: white;
+            background-color: $white;
             padding: 2rem 2rem 1rem 2rem;
 
 

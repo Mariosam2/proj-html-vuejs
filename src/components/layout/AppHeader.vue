@@ -32,7 +32,7 @@ export default {
             <div class="row align-items-md-stretch">
                 <div class="col-md-6 position-relative">
                     <img :src="getImageUrl('author-logo-round-small.png')" alt="" class="ms_logo">
-                    <jumbotron :title="'Damon Vaugh'"
+                    <jumbotron :title="'Damon Vaughn'"
                         :content="'Best - selling author and the most influential public intellectual in the western world right now'"
                         :myKey="'header'"></jumbotron>
                 </div>

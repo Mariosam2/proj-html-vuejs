@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'CardsLayout',
+    name: 'EventsLayout',
     methods: {
         getImageUrl(name) {
             return new URL(`../../assets/img/${name}`, import.meta.url).href
