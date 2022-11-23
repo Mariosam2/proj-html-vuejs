@@ -18,7 +18,7 @@ export default {
             <button class="btn  bg_primary text-white ms_btn-large ms-auto">Read All Testimonials</button>
         </div>
         <div class="row gx-5">
-            <div class="col-12 col-xl-7 bg-testimonial position-relative">
+            <div class="col-12 col-xl-7 bg-testimonial position-relative my-3">
                 <div class="layover"></div>
                 <div class="content align-self-center text-white">
                     <h3 class="font-pt-serif mb-5 pb-5 border-bottom">Best Author of His Generation</h3>

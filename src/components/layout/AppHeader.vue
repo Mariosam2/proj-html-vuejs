@@ -36,7 +36,7 @@ export default {
                         :content="'Best - selling author and the most influential public intellectual in the western world right now'"
                         :myKey="'header'"></jumbotron>
                 </div>
-                <div class="col-4 d-none d-xl-block bg-white call-to-action">
+                <div class="col-4 d-none d-xxl-block bg-white call-to-action">
                     <div class="flex-container d-flex">
                         <div class="flex-item">
                             <img :src="getImageUrl('book-widget.png')" alt="">

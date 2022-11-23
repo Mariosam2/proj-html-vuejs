@@ -109,14 +109,20 @@
     .articles {
 
         .content.ms_card {
-            height: 100%;
-            padding: 2rem 2rem 0 2rem;
+
+            h4 {
+                padding-top: 2rem;
+            }
         }
 
         .ms_card {
             background-color: $white;
-            padding: 2rem 2rem 1rem 2rem;
+            padding: 2rem;
+            flex-grow: 1;
 
+            h4 {
+                padding-top: 1rem;
+            }
 
             img {
                 width: 100%;
@@ -125,9 +131,7 @@
 
         }
 
-        h4 {
-            padding-top: 2rem;
-        }
+
 
 
 

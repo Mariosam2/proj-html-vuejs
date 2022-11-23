@@ -12,7 +12,7 @@ export default {
             </div>
             <button class="btn  bg_primary text-white ms_btn-large ms-auto">All Articles</button>
         </div>
-        <div class="row gx-5">
+        <div class="row gx-5 my-3">
             <div class="col-12 col-xl-8">
                 <div class="content ms_card">
                     <img src="../../assets/img/20-Tips-1200x706.jpg" alt="">
@@ -28,7 +28,7 @@ export default {
 
 
             </div>
-            <div class="col-12 col-xl-4">
+            <div class="col-12 col-xl-4 d-flex flex-column">
                 <div class="ms_card">
                     <img src="../../assets/img/thumb-13-2x-700x441.jpg" alt="">
                     <h4>What's On Your Booklist?</h4>
@@ -46,6 +46,8 @@ export default {
     </div>
 
 </template>
-<style>
-
+<style lang="scss" scoped>
+.ms_card {
+    flex-grow: 1;
+}
 </style>
